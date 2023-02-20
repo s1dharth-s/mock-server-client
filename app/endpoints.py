@@ -4,9 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from .import schema, models
 from .database import SessionLocal, engine, get_db
 
-# # Create all database tables if they don't exist
-# models.Base.metadata.create_all(bind=engine)
-
+ 
 router = APIRouter(prefix="/data",
                    tags=["Data"],
                    responses={404: {"description": "Not Found!"}})
