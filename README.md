@@ -36,6 +36,7 @@ The client can be found at `client.py` and is even simpler than the webserver. I
 
 * Logging: Logging is quite important for any application. Here I have not implemented logging yet as it is a barebones program, but given time it will be the next addition.
 * We can dockerize the application, making its deployment and management even easier.
+* Tests: Testing is also an important thing I have overlooked here.
 * Configuration file: A lot of values like the webserver port, client application URL etc are hardcoded now. Ideally these values should be configurable and read from a configuration file (eg: config.ini).
 * Additional error handling capabilites for the client: I ran out of time by the time I reached this part!
 * Mechanism to generate unique IDs instead of using integers.
