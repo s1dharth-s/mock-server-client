@@ -18,6 +18,16 @@ A simple webserver and client built with [FastAPI](https://fastapi.tiangolo.com)
 **Note:** Default port is 8000 and URL is: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 4. The API documentation can be found in the Swagger UI at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).The Swagger UI gives an interactive UI to play around with the two API endpoints.
 
+### Walkthrough
+The webserver app is available at `./app/` and is divided into different files:
+1. [`endpoints.py`](https://github.com/s1dharth-s/mock-server-client/blob/main/app/endpoints.py): The two API endpoints are defined over here. Some basic error handling capablilities such as returning `404` error when an ID is not found has been added. But much more improvements could be made.
+
+2. [`database.py`](https://github.com/s1dharth-s/mock-server-client/blob/main/app/database.py): A simple SQLite database to store the data. I have chosen to use SQLAlchemy ORM to work with the database because I find working with ORMs much easier and intuitive.
+
+    [`model.py`](https://github.com/s1dharth-s/mock-server-client/blob/main/app/models.py) is where the ORM model of the database is defined.
+
+3. [`schema.py`](https://github.com/s1dharth-s/mock-server-client/blob/main/app/schema.py): A big reason why I like working with FastAPI is [pydantic](https://docs.pydantic.dev/). It helps in data validation and type management. The pydantic model for the API request and response body is defined here.
+
 ## Client
 
 The client can be found at `client.py` and is even simpler than the webserver. I have implemented it as a class and the methods can be imported and used to call the GET and PUT API methods of our websever with ease.
