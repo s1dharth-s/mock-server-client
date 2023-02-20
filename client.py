@@ -46,4 +46,6 @@ if __name__ == "__main__":
 
     sample_payload = {"name": "Harry",}
     print(c.update_data(2, sample_payload))
+    
+    # Queries data with the ID 1
     print(c.fetch_data(1))
